@@ -272,11 +272,11 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>
+									<target>
 										<copy todir="${jboss.home}/modules/system/layers/base/${module.path}">
 											<fileset dir="${project.build.directory}/module"/>
 										</copy>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 							<execution>
@@ -286,9 +286,9 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>									
+									<target>									
 										<delete failonerror="false" dir="${jboss.home}/modules/system/layers/base/${module.path}"/>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 						</executions>
@@ -310,7 +310,7 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>										
+									<target>										
 										<replace file="${jboss.home}/standalone/configuration/standalone.xml">
   											<replacetoken><![CDATA[</extensions>]]></replacetoken>
   											<replacevalue><![CDATA[<extension module="org.restcomm.slee.container.extension"/></extensions>]]></replacevalue>
@@ -319,7 +319,7 @@
   											<replacetoken><![CDATA[</profile>]]></replacetoken>
   											<replacevalue><![CDATA[<subsystem xmlns="urn:restcomm:slee-container:3.0"/></profile>]]></replacevalue>
 										</replace>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 							<execution>
@@ -329,7 +329,7 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>									
+									<target>									
 										<replace file="${jboss.home}/standalone/configuration/standalone.xml">
   											<replacetoken><![CDATA[<extension module="org.restcomm.slee.container.extension"/>]]></replacetoken>
   											<replacevalue><![CDATA[]]></replacevalue>
@@ -338,7 +338,7 @@
   											<replacetoken><![CDATA[<subsystem xmlns="urn:restcomm:slee-container:3.0"/>]]></replacetoken>
   											<replacevalue><![CDATA[]]></replacevalue>
 										</replace>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 						</executions>
@@ -360,11 +360,11 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>
+									<target>
 										<copy todir="${jboss.home}/modules/${module.path}">
 											<fileset dir="${project.build.directory}/module"/>
 										</copy>										
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 							<execution>
@@ -374,9 +374,9 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>									
+									<target>									
 										<delete failonerror="false" dir="${jboss.home}/modules/${module.path}"/>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 						</executions>
@@ -398,7 +398,7 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>										
+									<target>										
 										<replace file="${jboss.home}/standalone/configuration/standalone.xml">
   											<replacetoken><![CDATA[</extensions>]]></replacetoken>
   											<replacevalue><![CDATA[<extension module="org.restcomm.slee.container.extension"/></extensions>]]></replacevalue>
@@ -407,7 +407,7 @@
   											<replacetoken><![CDATA[</profile>]]></replacetoken>
   											<replacevalue><![CDATA[<subsystem xmlns="urn:restcomm:slee-container:3.0"/></profile>]]></replacevalue>
 										</replace>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 							<execution>
@@ -417,7 +417,7 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>									
+									<target>									
 										<replace file="${jboss.home}/standalone/configuration/standalone.xml">
   											<replacetoken><![CDATA[<extension module="org.restcomm.slee.container.extension"/>]]></replacetoken>
   											<replacevalue><![CDATA[]]></replacevalue>
@@ -426,7 +426,7 @@
   											<replacetoken><![CDATA[<subsystem xmlns="urn:restcomm:slee-container:3.0"/>]]></replacetoken>
   											<replacevalue><![CDATA[]]></replacevalue>
 										</replace>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 						</executions>
@@ -450,11 +450,11 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>
+									<target>
 										<copy todir="${jboss.home}/modules/system/layers/base/${module.path}">
 											<fileset dir="${project.build.directory}/module"/>
 										</copy>										
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 							<execution>
@@ -464,9 +464,9 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>									
+									<target>									
 										<delete failonerror="false" dir="${jboss.home}/modules/system/layers/base/${module.path}"/>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 						</executions>
@@ -488,7 +488,7 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>
+									<target>
 									<replace file="${jboss.home}/standalone/configuration/standalone.xml">
 										<replacetoken><![CDATA[<extension module="org.restcomm.slee.container.extension"/>]]></replacetoken>
 									</replace>								
@@ -559,7 +559,7 @@
 		<module name="org.restcomm.slee.container.lib"/>
 	</dependencies>]]></replacevalue>
 										</replace>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 							<execution>
@@ -569,7 +569,7 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>
+									<target>
 										<replace file="${jboss.home}/standalone/configuration/standalone.xml">
   											<replacetoken><![CDATA[<extension module="org.restcomm.slee.container.extension"/>]]></replacetoken>
   											<replacevalue><![CDATA[]]></replacevalue>
@@ -591,7 +591,7 @@
 											<replacetoken><![CDATA[<module name="org.restcomm.slee.container.lib"/>]]></replacetoken>
 											<replacevalue><![CDATA[]]></replacevalue>
 										</replace>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 						</executions>

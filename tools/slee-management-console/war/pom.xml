@@ -85,10 +85,10 @@
 							<goal>run</goal>
 						</goals>
 						<configuration>
-							<tasks>
+							<target>
 								<copy overwrite="true" file="target/${build.finalName}.war" todir="${jboss.home}/standalone/deployments" />
 								<delete failonerror="false" dir="${user.dir}/.gwt-cache" />
-							</tasks>
+							</target>
 						</configuration>
 					</execution>
 					<execution>
@@ -98,9 +98,9 @@
 							<goal>run</goal>
 						</goals>
 						<configuration>
-							<tasks>
+							<target>
 								<delete file="${jboss.home}/standalone/deployments/${build.finalName}.war" />
-							</tasks>
+							</target>
 						</configuration>
 					</execution>
 				</executions>

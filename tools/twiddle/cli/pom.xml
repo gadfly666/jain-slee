@@ -104,7 +104,7 @@
 						<phase>install</phase>
 						<inherited>false</inherited>
 						<configuration>
-							<tasks>
+							<target>
 								<copy todir="${tool.directory}" verbose="true">
 									<fileset dir="script" includes="log4j.properties" />
 									<fileset dir="script" includes="*.sh" />
@@ -115,7 +115,7 @@
 									<fileset dir="script" includes="*.jar" />
 								</copy>
 								<chmod dir="${tool.directory}" perm="ugo+rx" includes="**/*.sh"/>
-							</tasks>
+							</target>
 						</configuration>
 					</execution>
 				</executions>
